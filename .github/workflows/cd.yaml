@@ -28,32 +28,30 @@ jobs:
         with:
           node-version: "22"
           cache: "yarn"
-          cache-dependency-path: ui/yarn.lock
+          cache-dependency-path: yarn.lock
 
       - name: Install dependencies
         run: npm install
-        working-directory: ui
 
       - name: Build project
         run: npm run build
-        working-directory: ui
 
       - name: Check dist folder for symlinks or large files
         run: |
-          echo "🔍 Checking for symlinks in ./ui/dist..."
-          if find ./ui/dist -type l | grep .; then
+          echo "🔍 Checking for symlinks in ./dist..."
+          if find ./dist -type l | grep .; then
             echo "❌ Symlinks found in dist folder. Upload aborted."
             exit 1
           fi
 
-          echo "🔍 Checking for hard links in ./ui/dist..."
-          if find ./ui/dist -type f -exec stat --format '%n %h' {} + | awk '$2 > 1 {print $1}' | grep .; then
+          echo "🔍 Checking for hard links in ./dist..."
+          if find ./dist -type f -exec stat --format '%n %h' {} + | awk '$2 > 1 {print $1}' | grep .; then
             echo "❌ Hard links found in dist folder. Upload aborted."
             exit 1
           fi
 
           echo "📦 Calculating folder size..."
-          FOLDER_SIZE_MB=$(du -sm ./ui/dist | cut -f1)
+          FOLDER_SIZE_MB=$(du -sm ./dist | cut -f1)
           echo "Total size: ${FOLDER_SIZE_MB}MB"
 
           if [ "$FOLDER_SIZE_MB" -gt 9500 ]; then
@@ -66,7 +64,7 @@ jobs:
       - name: Upload production-ready build files
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./ui/dist
+          path: ./dist
 
   deploy:
     name: Deploy
