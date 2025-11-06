@@ -1,0 +1,50 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #4b5bdc;
+  --ifm-color-primary-dark: #4352c6;
+  --ifm-color-primary-darker: #3e4cb8;
+  --ifm-color-primary-darkest: #333f99;
+  --ifm-color-primary-light: #5c6cf0;
+  --ifm-color-primary-lighter: #6d7af1;
+  --ifm-color-primary-lightest: #9199f6;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --runbook-hero-bg: linear-gradient(135deg, rgba(39, 45, 70, 0.95), rgba(81, 91, 141, 0.9));
+  --runbook-section-alt-bg: #f6f7fb;
+  --runbook-card-bg: #ffffff;
+  --runbook-card-border: rgba(35, 44, 79, 0.12);
+  --runbook-card-shadow: 0 20px 40px rgba(15, 23, 42, 0.04);
+  --runbook-card-text: #3e4254;
+  --runbook-lead-text: #4c4f63;
+  --runbook-card-icon-bg: rgba(76, 86, 182, 0.12);
+  --runbook-card-accent: linear-gradient(140deg, rgba(78, 101, 255, 0.18), rgba(126, 87, 255, 0.07));
+  --runbook-hero-meta: rgba(232, 234, 249, 0.85);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #7d8cff;
+  --ifm-color-primary-dark: #707df0;
+  --ifm-color-primary-darker: #6774e0;
+  --ifm-color-primary-darkest: #545fc0;
+  --ifm-color-primary-light: #8d9bff;
+  --ifm-color-primary-lighter: #9aa6ff;
+  --ifm-color-primary-lightest: #b3bcff;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --runbook-hero-bg: linear-gradient(135deg, rgba(12, 16, 38, 0.95), rgba(44, 55, 103, 0.85));
+  --runbook-section-alt-bg: rgba(15, 22, 45, 0.82);
+  --runbook-card-bg: #0f172a;
+  --runbook-card-border: rgba(99, 102, 241, 0.3);
+  --runbook-card-shadow: 0 28px 48px rgba(6, 11, 40, 0.55);
+  --runbook-card-text: #d6dcff;
+  --runbook-lead-text: #bec8ff;
+  --runbook-card-icon-bg: rgba(99, 102, 241, 0.28);
+  --runbook-card-accent: linear-gradient(140deg, rgba(99, 102, 241, 0.28), rgba(45, 212, 191, 0.1));
+  --runbook-hero-meta: rgba(195, 205, 255, 0.85);
+}

@@ -1,0 +1,9 @@
+field-notes:
+  label: Field Notes
+  permalink: /field-notes
+  description: Stories from real hve.run experiments.
+
+playbook:
+  label: Playbook
+  permalink: /playbook
+  description: How teams make the most of The HVE Runbook.
