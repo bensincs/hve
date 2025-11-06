@@ -79,7 +79,7 @@ export default function Home(): ReactNode {
             <div className={styles.ctaGroup}>
               <Link
                 className="button button--primary button--lg"
-                to="/docs/getting-started"
+                to="/docs/basics/overview"
               >
                 Get Started
               </Link>
